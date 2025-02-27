@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест на уровень IQ</title>
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bad+Script&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Marck+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <button class="burger-menu">
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#hero" class="nav__link">главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="#info" class="nav__link">информация о тесте</a>
+          </li>
+          <li class="nav__item">
+            <a href="#iq-test" class="nav__link">пройти тест</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section hero" id="hero">
+      <div class="container">
+        <p class="hero__subtitle">Пройдите точный и быстрый</p>
+        <h1 class="hero__title">тест на определение IQ</h1>
+        <button class="button button_colored">пройти тест</button>
+        <p class="hero__description"><span class="text_colored">И получите рекомендации <br>по развитию своего интеллекта</span> и улучшению финансового благосостояния и личной жизни</p>
+        <div class="hero__more">
+          <button class="hero__more__button">
+            <img src="./img/svg/arrow.svg" alt="стрелка вверх">
+          </button>
+          <span class="hero__more__text">Подробнее</span>
+        </div>
+      </div>
+    </section>
+    <section class="section info" id="info">
+      <div class="container info__container">
+        <img src="./img/svg/quotation-marks-top.svg" alt="кавычки">
+        <p class="info__ quote">Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и выработать список рекомендаций для повышения этого показателя.</p>
+        <img src="./img/svg/quotation-marks-bottom.svg" alt="кавычки">
+      </div>
+    </section>
+    <section class="section iq-test" id="iq-test">
+      <div class="container iq-test__container">
+        <p class="iq-test__text">Также по результатам теста <span class="text_highlighted">вы получите</span> подробные <span class="text_highlighted">советы</span> по определению наиболее перспективной <span class="text_highlighted">для вашего типа</span> <strong>интеллекта</strong> <span class="text_highlighted">сферы деятельности,</span> которая принесет вам скорейший финансовый результат.</p>
+      <img class="iq-test__img" src="./img/png/hemispheres.png" alt="полушария головного мозга">
+      <button class="button button_colored">пройти тест</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <p>Прохождение теста займет у вас не более <span class="text_colored">12 минут</span>, а его <strong>результаты</strong> вы сможете <span class="text_colored">использовать всю жизнь.</span></p>
+      <p class="footer__description">Профессиональная интерпретация и детально <strong>проработанные рекомендации</strong> позволят вам качественно <strong>изменить все аспекты своей жизни:</strong>  от финансового до любовного.</p>
+    </div>
+    <button class="button button_transparent">пройти тест</button>
+    <span>&copy; 2025</span>
+  </footer>
+</body>
+</html>
