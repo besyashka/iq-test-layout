@@ -1,0 +1,16 @@
+:root {
+  --color-primer: #FFC700;
+  --color-light: #FFFFFF;
+  --color-background: #F2F3F3;
+  --color-background-dark: #181818;
+  --color-background-privacy: #1C2741; 
+  --color-background-footer: #F3F3F2CC;
+  --color-text-dark: #272727;
+  --color-text-inactive: #8E8E8E;
+  --color-text-button: #0D0C11;
+  --color-burger-line: #DADADA;
+  --color-nav-link: #F4CE0C;
+  --color-additional: #3BDE7C;
+  --color-selection: #2950C2; 
+  --color-red: #EB1B00;
+}
