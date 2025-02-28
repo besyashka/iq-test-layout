@@ -58,6 +58,7 @@ img {
   height: auto;
 }
 
+/* Стили для кнопок */
 .button {
   padding: 12px 33px;
   font-family: 'Merriweather', serif;
@@ -81,6 +82,7 @@ img {
   border: 1px solid var(--color-light);
 }
 
+/* Стили для текста */
 .text_colored {
   font-weight: 600;
   color: var(--color-primer);
@@ -91,15 +93,18 @@ img {
   text-transform: uppercase;
 }
 
+/* Стили для контейнера */
 .container {
   padding: 0 10px;
 }
 
+/* Стили для header */
 .header {
   padding: 13px 0px 8px;
   background-color: var(--color-background-dark);
 }
 
+/* Стили для burger-menu */
 .burger-menu {
   background-color: transparent;
   border: none;
@@ -113,6 +118,7 @@ img {
   border-radius: 1px;
 }
 
+/* Стили для навигации */
 .nav {
   display: none;
 }
@@ -125,6 +131,7 @@ img {
   color: var(--color-light);
 }
 
+/* Стили для раздела hero */
 .hero {
   background-image: url('./img/png/bg-hero.png');
   background-size: cover;
@@ -167,6 +174,7 @@ img {
   font-weight: 600;
 }
 
+/* Стили для раздела info */
 .info {
   background-image: url('./img/png/bg-info-2.png'), url('./img/png/bg-info-1.png');
   background-size: cover;
@@ -195,6 +203,7 @@ img {
   letter-spacing: 1px;
 }
 
+/* Стили для раздела iq-test */
 .iq-test__container {
   display: flex;
   flex-direction: column;
@@ -214,6 +223,7 @@ img {
   margin-top: 22px;
 }
 
+/* Стили для footer*/
 .footer {
   background-image: url('./img/png/thunderstorm-right.png'), url('./img/png/thunderstorm-left.png'), url('./img/png/bg.png');
   background-position: right 64px, left 272px, center;
