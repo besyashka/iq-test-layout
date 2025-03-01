@@ -281,3 +281,65 @@ img {
   line-height: 23px;
   letter-spacing: 0.5px;
 }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  .hero__img {
+    visibility: visible;
+  }
+
+  .hero__description {
+    margin: 22px 100px 15px;
+  }
+
+  .info__container {
+    padding: 5% 19%;
+  }
+
+  .iq-test__container {
+    padding: 38px 20px;
+  }
+
+  .iq-test__text {
+    padding: 0px 14%;
+    text-align: center;
+  }
+
+  .footer__text {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 0;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item {
+    margin-right: 20px;
+  }
+
+  .iq-test__text {
+    padding: 0px 25%;
+  }
+
+  .footer__description {
+    width: 90%;
+  }
+}
