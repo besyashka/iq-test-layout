@@ -29,6 +29,10 @@ body {
   color: var(--color-light);
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1 {
   margin-top: 17px;
   padding: 0 25px;
@@ -113,32 +117,75 @@ img {
 .burger-menu {
   background-color: transparent;
   border: none;
+  transition: transform 0.5s ease;
+}
+
+.burger-menu.open {
+  transform: translateX(260px);
 }
 
 .burger-menu__line {
   display: block;
   width: 23px;
+  height: 1px;
   margin-top: 4.2px;
-  border: 1px solid var(--color-burger-line);
-  border-radius: 1px;
+  background-color: var(--color-burger-line);
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+.burger-menu.open .burger-menu__line {
+  width: 32px;
+  height: 3px;
+  background-color: var(--color-primer);
+}
+
+.burger-menu.open .burger-menu__line:nth-child(1) {
+  transform: translate(0px, 10px) rotate(45deg);
+}
+
+.burger-menu.open .burger-menu__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open .burger-menu__line:nth-child(3) {
+  transform: translate(0px, -5px) rotate(-45deg);
 }
 
 /* Стили для навигации */
 .nav {
-  display: none;
+  position: fixed;
+  left: -100%;
+  width: 320px;
+  height: 100vh;
+  padding-top: 16%;
+  background-color: var(--color-background-dark);
+  transition: all 0.5s;
+  z-index: 100; 
+}
+
+.nav.active {
+  left: 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 27px;
+  gap: 21px;
 }
 
 .nav__link {
   font-family: 'Roboto', serif;
   font-size: 16px;
   line-height: 22px;
+  font-weight: 100;
   text-transform: uppercase;
   color: var(--color-light);
 }
 
 /* Стили для main */
 .main {
-  padding-top: 46px;
+  padding-top: 44px;
 }
 
 /* Стили для раздела hero */
@@ -246,7 +293,8 @@ img {
 
 /* Стили для footer*/
 .footer {
-  background-image: url('./img/png/thunderstorm-right.png'), url('./img/png/thunderstorm-left.png'), url('./img/png/bg.png');
+  background-image: url('./img/png/thunderstorm-right.png'), url('./img/png/thunderstorm-left.png'),
+    url('./img/png/bg.png');
   background-position: right 64px, left 272px, center;
   background-size: auto, auto, cover;
   background-repeat: no-repeat;
@@ -323,12 +371,15 @@ img {
   }
 
   .nav {
-    display: flex;
-    justify-content: center;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
   }
 
   .nav__list {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .nav__item {
@@ -341,5 +392,12 @@ img {
 
   .footer__description {
     width: 90%;
+  }
+}
+
+@media (hover: hover) {
+  .nav__link:hover {
+    color: var(--color-nav-link);
+    transition: color 0.5s;
   }
 }
