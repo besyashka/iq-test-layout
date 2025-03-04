@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bad+Script&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Marck+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/test-style.css">
 </head>
 <body>
   <header class="header">
@@ -40,7 +41,7 @@
         <p class="hero__subtitle">Пройдите точный и быстрый</p>
         <h1 class="hero__title">тест на определение IQ</h1>
         <img class="hero__img" src="./img/png/brain.png" alt="мозг">
-        <button class="button button_colored">пройти тест</button>
+        <button class="button button_colored button-test">пройти тест</button>
         <p class="hero__description"><span class="text_colored">И получите рекомендации <br>по развитию своего интеллекта</span> и улучшению финансового благосостояния и личной жизни</p>
         <div class="hero__more">
           <button class="hero__more__button">
@@ -63,15 +64,16 @@
       <div class="container iq-test__container">
         <p class="iq-test__text">Также по результатам теста <br><span class="text_highlighted">вы получите</span> подробные <span class="text_highlighted">советы</span> по определению наиболее перспективной <span class="text_highlighted">для вашего типа</span> <strong>интеллекта</strong> <span class="text_highlighted">сферы деятельности,</span> <br>которая принесет вам скорейший финансовый результат.</p>
         <img class="iq-test__img" src="./img/png/hemispheres.png" alt="полушария головного мозга">
-        <button class="button button_colored">пройти тест</button>
+        <button class="button button_colored button-test">пройти тест</button>
       </div>
     </section>
   </main>
   <footer class="footer">
     <p class="footer__text">Прохождение теста займет у вас не более <span class="text_colored">12 минут</span>, а его <strong>результаты</strong> вы сможете <span class="text_colored">использовать всю жизнь.</span></p>
     <p class="footer__description">Профессиональная интерпретация и детально <strong>проработанные рекомендации</strong> позволят вам качественно <strong>изменить все аспекты своей жизни:</strong>  от финансового до любовного.</p>
-    <button class="button button_transparent">пройти тест</button>
+    <button class="button button_transparent button-test">пройти тест</button>
     <span class="footer__copyright">&copy; 2019</span>
   </footer>
+  <script type="module" src="./js/index.js"></script>
 </body>
 </html>
