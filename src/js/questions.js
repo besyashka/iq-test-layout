@@ -1,4 +1,4 @@
-const questions = [
+export const questions = [
   {
     question: 'Ваш пол:',
     answers: ['Мужчина', 'Женщина'],
