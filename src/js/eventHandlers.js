@@ -1,5 +1,6 @@
 import { renderPage, renderAnswers, renderProcessingOfResult } from './renderPage.js';
 import { state } from './state.js';
+import { addHidden, toggleHidden } from './toggleVisibility.js';
 
 // Функция для обработки событий для кнопок 'проийти тест'
 export const handleClickButtonTest = () => {
