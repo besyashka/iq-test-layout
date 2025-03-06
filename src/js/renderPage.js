@@ -76,3 +76,26 @@ const renderButtonNext = (testContainer, form) => {
 
   handleClickButtonNext(nextButton, form, questions);
 };
+
+// Функция для рендеринга процесса обработки результата
+export const renderProcessingOfResult = () => {
+  const testContainer = document.querySelector('.test__container');
+  testContainer.style.justifyContent = 'start';
+
+  createElement('h3', 'processing-result__title', testContainer, 'Обработка результатов');
+  renderPreloader(testContainer);
+};
+
+// Функция для рендеринга preloader
+const renderPreloader = (testContainer) => {
+  const preloader = createElement('div', 'preloader', testContainer);
+  const preloaderImg = createElement('img', 'preloader__image', preloader);
+  preloaderImg.src = './img/svg/preloader.svg';
+
+  createElement(
+    'p',
+    'processing-result__text',
+    testContainer,
+    'Определение стиля мышления........... .... ...................................................'
+  );
+};
