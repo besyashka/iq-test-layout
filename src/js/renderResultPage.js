@@ -29,7 +29,7 @@ export const renderResultPage = () => {
   );
 
   renderTimer(testContainer);
-  renderLink(testContainer);
+  renderButtonLinkCall(testContainer);
 
   createElement('div', 'footer__result__data', testContainer);
   createElement(
@@ -66,7 +66,7 @@ const renderTimer = (testContainer) => {
 };
 
 // Функция для рендеринга кнопки-ссылки звонка
-const renderLink = (testContainer) => {
+const renderButtonLinkCall = (testContainer) => {
   const link = createElement('a', 'result__button-link', testContainer, '');
   link.href = 'tel:+00000000000';
 
