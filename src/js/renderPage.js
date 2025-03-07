@@ -1,6 +1,7 @@
 import { questions } from './questions.js';
 import { state } from './state.js';
 import { updateAnswerSelection, handleClickButtonNext } from './eventHandlers.js';
+import { renderResultPage } from './renderResultPage.js';
 
 // Функция для создание HTML-элементов
 const createElement = (tag, className, parent, textContent = null) => {
@@ -17,8 +18,8 @@ const createElement = (tag, className, parent, textContent = null) => {
 
 // Функция для рендеринга страницы Test
 export const renderPage = () => {
-  const body = document.body;
-  const testContainer = createElement('div', 'test__container', body);
+  const main = document.querySelector('.main');
+  const testContainer = createElement('div', 'test__container', main);
 
   renderHeaderTitle();
   renderProgressBar(testContainer);
@@ -98,4 +99,8 @@ const renderPreloader = (testContainer) => {
     testContainer,
     'Определение стиля мышления........... .... ...................................................'
   );
+
+  setTimeout(() => {
+    renderResultPage();
+  }, 2000);
 };
