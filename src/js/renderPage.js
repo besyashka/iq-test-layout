@@ -1,20 +1,8 @@
 import { questions } from './questions.js';
 import { state } from './state.js';
+import { createElement } from './createElement.js';
 import { updateAnswerSelection, handleClickButtonNext } from './eventHandlers.js';
 import { renderResultPage } from './renderResultPage.js';
-
-// Функция для создание HTML-элементов
-const createElement = (tag, className, parent, textContent = null) => {
-  const element = document.createElement(tag);
-  element.className = className;
-
-  if (textContent) {
-    element.textContent = textContent;
-  }
-
-  parent.append(element);
-  return element;
-};
 
 // Функция для рендеринга страницы Test
 export const renderPage = () => {
