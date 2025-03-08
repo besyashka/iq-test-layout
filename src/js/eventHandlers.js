@@ -1,13 +1,14 @@
-import { renderPage, renderAnswers, renderProcessingOfResult } from './renderPage.js';
+import { renderPage, renderImageQuestion, renderAnswers, renderProcessingOfResult } from './renderPage.js';
 import { state } from './state.js';
 import { addHidden, toggleHidden } from './toggleVisibility.js';
+import { updateProgressBar } from './progressBar.js';
 
 // Функция для обработки событий для кнопок 'проийти тест'
 export const handleClickButtonTest = () => {
   document.querySelectorAll('.button-test').forEach((button) => {
     button.addEventListener('click', () => {
       renderPage();
-      toggleHidden(['.main', '.footer']);
+      toggleHidden(['.main__container', '.footer']);
     });
   });
 };
@@ -22,7 +23,7 @@ export const updateAnswerSelection = (form) => {
 };
 
 // Функция для обработки событий по кнопке 'далее'
-export const handleClickButtonNext = (nextButton, form, questions) => {
+export const handleClickButtonNext = (nextButton, imgQuestion, form, questions) => {
   nextButton.addEventListener('click', () => {
     const question = document.querySelector('.test__question');
     state.index++;
@@ -31,9 +32,11 @@ export const handleClickButtonNext = (nextButton, form, questions) => {
       question.textContent = questions[state.index].question;
       form.innerHTML = '';
 
+      renderImageQuestion(imgQuestion);
       renderAnswers(form);
+      updateProgressBar();
     } else {
-      addHidden([question, form, nextButton]);
+      addHidden([question, imgQuestion, form, nextButton]);
       renderProcessingOfResult();
     }
   });

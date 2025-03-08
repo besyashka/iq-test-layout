@@ -13,10 +13,11 @@ export const renderPage = () => {
   renderProgressBar(testContainer);
   renderQuestion(testContainer);
 
+  const imgQuestion = createElement('img', 'test__question__img', testContainer);
   const form = createElement('form', 'form', testContainer);
 
   renderAnswers(form);
-  renderButtonNext(testContainer, form);
+  renderButtonNext(testContainer, imgQuestion, form);
 
   return testContainer;
 };
@@ -41,6 +42,17 @@ const renderQuestion = (testContainer) => {
   createElement('h2', 'test__question', testContainer, questions[state.index].question);
 };
 
+// Функция для рендеринга картинки-вопроса, если она есть
+export const renderImageQuestion = (imgQuestion) => {
+  if (questions[state.index].image) {
+    imgQuestion.src = questions[state.index].image;
+    imgQuestion.classList.remove('hidden');
+  } else {
+    imgQuestion.classList.add('hidden');
+    return;
+  }
+};
+
 // Функция для рендеринга вариантов ответа
 export const renderAnswers = (form) => {
   questions[state.index].answers.forEach((answer, i) => {
@@ -59,11 +71,11 @@ export const renderAnswers = (form) => {
 };
 
 // Функция для рендеринга кнопки Next
-const renderButtonNext = (testContainer, form) => {
+const renderButtonNext = (testContainer, imgQuestion, form) => {
   const nextButton = createElement('button', 'button-next', testContainer, 'ДАЛЕЕ');
   nextButton.disabled = true;
 
-  handleClickButtonNext(nextButton, form, questions);
+  handleClickButtonNext(nextButton, imgQuestion, form, questions);
 };
 
 // Функция для рендеринга процесса обработки результата
