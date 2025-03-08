@@ -42,7 +42,7 @@ const renderQuestion = (testContainer) => {
   createElement('h2', 'test__question', testContainer, questions[state.index].question);
 };
 
-// Функция для рендеринга картинки-вопроса, если она есть
+// Функция для рендеринга картинки к вопросу, если она есть
 export const renderImageQuestion = (imgQuestion) => {
   if (questions[state.index].image) {
     imgQuestion.src = questions[state.index].image;
@@ -57,17 +57,40 @@ export const renderImageQuestion = (imgQuestion) => {
 export const renderAnswers = (form) => {
   questions[state.index].answers.forEach((answer, i) => {
     const option = createElement('div', 'option', form);
-    const input = createElement('input', 'input', option);
-    input.type = 'radio';
-    input.name = 'answer';
-    input.id = `answer-${i}`;
-    input.value = answer;
+    renderInput(option, i, answer);
 
-    const label = createElement('label', 'label', option, answer);
-    label.setAttribute('for', `answer-${i}`);
+    if (questions[state.index].type === 'radio') {
+      const label = createElement('label', 'label-radio', option, answer);
+      label.setAttribute('for', `answer-${i}`);
+
+      form.className = 'form';
+    } else if (questions[state.index].type === 'color') {
+      option.style.backgroundColor = answer;
+
+      const label = createElement('label', 'label-color', option);
+      label.setAttribute('for', `answer-${i}`);
+
+      form.className = 'form-color';
+      option.className = 'option-color';
+    } else if (questions[state.index].type === 'button') {
+      const label = createElement('label', 'label-button', option, answer);
+      label.setAttribute('for', `answer-${i}`);
+
+      form.className = 'form-button';
+      option.className = 'option-button';
+    }
 
     updateAnswerSelection(form);
   });
+};
+
+// Функция для рендеринга Input
+const renderInput = (option, index, answer) => {
+  const input = createElement('input', 'input', option);
+  input.type = 'radio';
+  input.name = 'answer';
+  input.id = `answer-${index}`;
+  input.value = answer;
 };
 
 // Функция для рендеринга кнопки Next
