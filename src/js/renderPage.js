@@ -11,10 +11,12 @@ export const renderPage = () => {
 
   renderHeaderTitle();
   renderProgressBar(testContainer);
-  renderQuestion(testContainer);
 
-  const imgQuestion = createElement('img', 'test__question__img', testContainer);
-  const form = createElement('form', 'form', testContainer);
+  const questionContainer = createElement('div', 'question__container', testContainer);
+  renderQuestion(questionContainer);
+
+  const imgQuestion = createElement('img', 'test__question__img', questionContainer);
+  const form = createElement('form', 'form', questionContainer);
 
   renderAnswers(form);
   renderButtonNext(testContainer, imgQuestion, form);
