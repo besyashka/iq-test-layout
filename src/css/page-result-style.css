@@ -82,6 +82,7 @@
   background-image: url('../img/png/bg.png');
   background-position: bottom;
   background-size: cover;
+  display: flex;
   justify-content: end;
   padding: 8px 13px 0 13px;
 }
