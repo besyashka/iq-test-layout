@@ -1,5 +1,6 @@
 import { createElement } from './createElement.js';
 import { toggleHidden } from './toggleVisibility.js';
+import { handleClickButtonCall } from './eventHandlers.js';
 
 // Функция для рендеринга страницы Result
 export const renderResultPage = () => {
@@ -31,7 +32,7 @@ export const renderResultPage = () => {
   renderTimer(testContainer);
   renderButtonLinkCall(testContainer);
 
-  createElement('div', 'footer__result__data', testContainer);
+  createElement('div', 'result__data', testContainer);
   createElement(
     'span',
     'text_xs',
@@ -74,6 +75,8 @@ const renderButtonLinkCall = (testContainer) => {
   img.src = './img/svg/telephone.svg';
 
   createElement('span', 'button-link__text', link, 'Позвонить и прослушать результат');
+
+  handleClickButtonCall(link);
 };
 
 // Функция для добавления молний на общий фон
