@@ -28,6 +28,8 @@ export const updateAnswerSelection = (form) => {
 export const handleClickButtonNext = (nextButton, imgQuestion, form, questions) => {
   nextButton.addEventListener('click', () => {
     const question = document.querySelector('.test__question');
+    const buttonNext = document.querySelector('.button-next');
+    buttonNext.disabled = true;
     state.index++;
 
     if (state.index < questions.length) {
@@ -38,6 +40,7 @@ export const handleClickButtonNext = (nextButton, imgQuestion, form, questions) 
       renderAnswers(form);
       updateProgressBar();
     } else {
+      updateProgressBar();
       addHidden([question, imgQuestion, form, nextButton]);
       renderProcessingOfResult();
     }
