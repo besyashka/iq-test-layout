@@ -29,4 +29,6 @@ const outputReceivedData = (jsonData) => {
   for (let key in data) {
     createElement('p', 'data', divResult, `${key}: ${data[key]}`);
   }
+
+  document.querySelector('.result').classList.add('hight-auto');
 };
