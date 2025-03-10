@@ -428,16 +428,8 @@ button:disabled {
     visibility: visible;
   }
 
-  .hero__description {
-    margin: 22px 100px 15px;
-  }
-
   .info__container {
-    padding: 5% 19%;
-  }
-
-  .iq-test__container {
-    padding: 38px 20px;
+    padding: 5% 8%;
   }
 
   .iq-test__text {
@@ -473,10 +465,6 @@ button:disabled {
 
   .nav__item {
     margin-right: 20px;
-  }
-
-  .iq-test__text {
-    padding: 0px 25%;
   }
 
   .footer__description {
