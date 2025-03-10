@@ -3,6 +3,7 @@ import { state } from './state.js';
 import { addHidden, toggleHidden } from './toggleVisibility.js';
 import { updateProgressBar } from './progressBar.js';
 import { fetchData } from './fetchData.js';
+import { stopTimer } from './timer.js';
 
 // Функция для обработки событий для кнопок 'проийти тест'
 export const handleClickButtonTest = () => {
@@ -47,5 +48,6 @@ export const handleClickButtonNext = (nextButton, imgQuestion, form, questions) 
 export const handleClickButtonCall = (buttonLink) => {
   buttonLink.addEventListener('click', () => {
     fetchData();
+    stopTimer();
   });
 };
