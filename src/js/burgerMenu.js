@@ -1,3 +1,6 @@
+import { state } from './state.js';
+import { removeElement } from './removeElement.js';
+
 // Функция для обработки клика по бургер-меню
 export const handleClickBurgerMenu = () => {
   const navigation = document.querySelector('.nav');
@@ -34,6 +37,11 @@ const handleClickNavigationLink = (buttonBurger, navigation) => {
   navigationLinks.forEach((link) => {
     link.addEventListener('click', () => {
       closeBurgerMenu(buttonBurger, navigation);
+
+      if (document.querySelector('.test__container')) {
+        removeElement();
+        state.reset();
+      }
     });
   });
 };
