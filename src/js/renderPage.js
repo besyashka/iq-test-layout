@@ -33,7 +33,7 @@ const renderHeaderTitle = () => {
 const renderProgressBar = (testContainer) => {
   const progressBar = createElement('progress', 'test__progress-bar', testContainer);
   progressBar.id = 'progress-bar';
-  progressBar.value = 8.33;
+  progressBar.value = 8.34;
   progressBar.max = 100;
 };
 
