@@ -83,7 +83,7 @@
   background-position: bottom;
   background-size: cover;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   padding: 8px 13px 0 13px;
 }
 
