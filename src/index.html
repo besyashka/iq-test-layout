@@ -10,10 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bad+Script&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Marck+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/test-style.css">
+  <link rel="stylesheet" href="./css/page-result-style.css">
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <button class="burger-menu">
         <span class="burger-menu__line"></span>
         <span class="burger-menu__line"></span>
@@ -32,10 +33,14 @@
           </li>
         </ul>
       </nav>
+      <div class="header__logo-title hidden">
+        <img class="header__logo" src="./img/png/brain-logo.png" alt="логотип">
+      </div>
     </div>
   </header>
   <main class="main">
-    <!-- секция hero -->
+    <div class="main__container">
+      <!-- секция hero -->
     <section class="section hero" id="hero">
       <div class="container hero__container">
         <p class="hero__subtitle">Пройдите точный и быстрый</p>
@@ -67,6 +72,7 @@
         <button class="button button_colored button-test">пройти тест</button>
       </div>
     </section>
+    </div>
   </main>
   <footer class="footer">
     <p class="footer__text">Прохождение теста займет у вас не более <span class="text_colored">12 минут</span>, а его <strong>результаты</strong> вы сможете <span class="text_colored">использовать всю жизнь.</span></p>
