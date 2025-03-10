@@ -1,5 +1,4 @@
 import { createElement } from './createElement.js';
-import { toggleHidden } from './toggleVisibility.js';
 import { handleClickButtonCall } from './eventHandlers.js';
 import { startTimer } from './timer.js';
 
@@ -8,13 +7,10 @@ export const renderResultPage = () => {
   const testContainer = document.querySelector('.test__container');
   testContainer.classList.add('result');
 
-  const footer = document.querySelector('.footer');
-  footer.classList.add('footer__result');
+  const footer = createElement('footer', 'footer__result', document.body);
 
   updateHeaderTitle();
-  clearContainers(testContainer, footer);
-  toggleHidden(['.footer']);
-
+  clearTestContainers(testContainer);
   createElement('h4', 'result__title', testContainer, 'Ваш результат рассчитан:');
   createElement(
     'p',
@@ -51,10 +47,9 @@ const updateHeaderTitle = () => {
   title.textContent = 'ГОТОВО!';
 };
 
-// Функция для очистки testContainer, footer перед рендериндгом страницы Result
-const clearContainers = (testContainer, footer) => {
+// Функция для очистки testContainer
+const clearTestContainers = (testContainer) => {
   testContainer.innerHTML = '';
-  footer.innerHTML = '';
 };
 
 // Функция для рендеринга timer
