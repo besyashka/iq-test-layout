@@ -1,6 +1,17 @@
+/* Стили для контейнера */
+.test__container {
+  background-image: url('../img/png/bg-test.png');
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 19px;
+}
+
 /* Стили для progress-bar */
 progress {
-  width: 81, 25%;
+  width: 81.25%;
   height: 11px;
   opacity: 0.59;
   appearance: none;
@@ -16,8 +27,24 @@ progress::-webkit-progress-value {
   border-radius: 5px;
 }
 
+/* Стили для контейнера c вопросом и ответами */
+.question__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.test__question__img {
+  width: auto;
+  height: auto;
+}
+
 /* Стили для form */
 form {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   font-family: 'PT Serif', serif;
   font-size: 18px;
@@ -25,44 +52,147 @@ form {
   color: var(--color-light);
 }
 
+.form-color {
+  display: flex;
+  justify-content: center;
+  column-gap: 21px;
+  row-gap: 23px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 25px;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  font-weight: 100;
+  color: var(--color-light);
+}
+
+.form-button {
+  justify-content: center;
+  gap: 2%;
+}
+
+/* Стили для option */
 .option {
   display: flex;
-  margin: 8px 0;
+  width: 100%;
+  margin-top: 9px;
   background-color: var(--color-background-transparent);
   cursor: pointer;
   transition: background-color 0.5s;
 }
 
-label {
+.option-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  color: var(--color-text-button);
+  background-color: var(--color-light);
+}
+
+.option-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+}
+
+/* Стили для label */
+.label-radio {
   position: relative;
   flex: 1;
-  padding: 15px 37px 15px 94px;
+  padding: 15px 38px 12px 82px;
   cursor: pointer;
   transition: background-color 0.5s;
 }
 
-label::before {
+.label-radio::before {
   content: '';
   width: 20px;
   height: 20px;
   position: absolute;
   left: 34px;
-  top: 15px;
+  top: 22%;
+  top: 27%;
   border: 1px solid var(--color-light);
   border-radius: 50%;
   transition: background-color 0.5s, border 0.5s;
 }
 
-input[type='radio'] {
+.label-button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 6px solid var(--color-light);
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.label-color {
+  padding: 34px;
+  cursor: pointer;
+}
+
+/* Стили дляinput */
+.input[type='radio'] {
   display: none;
 }
 
-input[type='radio']:checked + label {
+.input[type='radio']:checked + .label-radio {
   color: var(--color-background-dark);
   background-color: var(--color-primer);
 }
 
-input[type='radio']:checked + label::before {
+.input[type='radio']:checked + .label-radio::before {
   background-color: var(--color-selection);
   border: 1px solid var(--color-text-dark);
+}
+
+.input[type='radio']:checked + .label-button {
+  border: 6px solid var(--color-primer);
+}
+
+.input[type='radio']:checked + .label-color {
+  border: 6px solid var(--color-primer);
+}
+
+/* Стили для видимости элементов */
+.hidden {
+  display: none;
+}
+
+/* Стили для стрыницы  обработки результатов */
+.processing-result__text {
+  padding: 20px 22px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+}
+
+/* Стили для preloader */
+.preloader {
+  width: 68px;
+  height: 68px;
+  background-color: transparent;
+}
+
+.preloader__image {
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
 }

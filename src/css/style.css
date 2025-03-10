@@ -1,19 +1,20 @@
 :root {
-  --color-primer: #FFC700;
-  --color-light: #FFFFFF;
-  --color-background: #F2F3F3;
+  --color-primer: #ffc700;
+  --color-light: #ffffff;
+  --color-background: #f2f3f3;
   --color-background-transparent: rgba(242, 243, 243, 0.15);
   --color-background-dark: #181818;
-  --color-background-privacy: #1C2741; 
-  --color-background-footer: #F3F3F2CC;
+  --color-background-privacy: #1c2741;
+  --color-background-footer: #f3f3f2cc;
+  --color-text-xs: #ffffff80;
   --color-text-dark: #272727;
-  --color-text-inactive: #8E8E8E;
-  --color-text-button: #0D0C11;
-  --color-burger-line: #DADADA;
-  --color-nav-link: #F4CE0C;
-  --color-additional: #3BDE7C;
-  --color-selection: #2950C2; 
-  --color-red: #EB1B00;
+  --color-text-inactive: #8e8e8e;
+  --color-text-button: #0d0c11;
+  --color-burger-line: #dadada;
+  --color-nav-link: #f4ce0c;
+  --color-additional: #3bde7c;
+  --color-selection: #2950c2;
+  --color-red: #eb1b00;
 }
 
 * {
@@ -22,6 +23,7 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: 'PT Serif', serif;
@@ -46,6 +48,46 @@ h1 {
   color: var(--color-primer);
 }
 
+h2 {
+  margin: 0;
+  padding: 10px 25px 0px;
+  font-size: 20px;
+  line-height: 23.5px;
+  letter-spacing: 0.7px;
+  font-weight: 100;
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  padding: 45px 35px;
+  font-size: 23px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+h4 {
+  margin: 7px 0;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin: 20px 0 16px 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-additional);
+}
+
 p {
   margin: 0;
 }
@@ -65,6 +107,7 @@ img {
 
 /* Стили для кнопок */
 .button {
+  margin: 0;
   padding: 12px 33px;
   font-family: 'Merriweather', serif;
   font-size: 14px;
@@ -78,6 +121,7 @@ img {
 }
 
 button:disabled {
+  margin-bottom: 27px;
   color: var(--color-text-inactive);
   background-color: var(--color-burger-line);
   cursor: not-allowed;
@@ -95,9 +139,16 @@ button:disabled {
 }
 
 .button-next {
+  margin-bottom: 24px;
   padding: 12px 65px;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  line-height: 17.6px;
+  letter-spacing: 1.5px;
   background-color: var(--color-primer);
+  border-radius: 20px;
   border: none;
+  cursor: pointer;
 }
 
 /* Стили для текста */
@@ -111,9 +162,15 @@ button:disabled {
   text-transform: uppercase;
 }
 
-/* Стили для контейнера */
-.container {
-  padding: 0 10px;
+.text_xs {
+  overflow: auto;
+  max-height: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 7px;
+  line-height: 9px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--color-text-xs);
 }
 
 /* Стили для header */
@@ -122,8 +179,26 @@ button:disabled {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 13px 0px 8px;
   background-color: var(--color-background-dark);
+}
+
+.header__container {
+  display: flex;
+  height: 46px;
+}
+
+.header__logo-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header__title {
+  padding: 0;
+  font-family: 'Yeseva One', serif;
+  font-size: 12px;
+  line-height: 13.86px;
+  letter-spacing: 0.5px;
 }
 
 /* Стили для burger-menu */
@@ -135,6 +210,7 @@ button:disabled {
 
 .burger-menu.open {
   transform: translateX(260px);
+  z-index: 110;
 }
 
 .burger-menu__line {
@@ -173,7 +249,7 @@ button:disabled {
   padding-top: 16%;
   background-color: var(--color-background-dark);
   transition: all 0.5s;
-  z-index: 100; 
+  z-index: 100;
 }
 
 .nav.active {
