@@ -1,6 +1,7 @@
 import { createElement } from './createElement.js';
 import { toggleHidden } from './toggleVisibility.js';
 import { handleClickButtonCall } from './eventHandlers.js';
+import { startTimer } from './timer.js';
 
 // Функция для рендеринга страницы Result
 export const renderResultPage = () => {
@@ -62,8 +63,10 @@ const renderTimer = (testContainer) => {
   createElement('span', 'timer__title', timerContainer, 'Звоните скорее, запись доступна всего');
 
   const timer = createElement('div', 'timer', timerContainer);
-  createElement('span', 'timer__value', timer, '10:00 ');
-  createElement('span', 'timer__text', timer, 'минут');
+  const valueTimer = createElement('time', 'timer__value', timer, '10:00');
+  createElement('span', 'timer__text', timer, ' минут');
+
+  startTimer(valueTimer);
 };
 
 // Функция для рендеринга кнопки-ссылки звонка
