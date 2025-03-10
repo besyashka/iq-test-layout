@@ -1,0 +1,122 @@
+/* Стили для страницы результатов*/
+.result {
+  position: relative;
+  padding-top: 29px;
+}
+
+.result__header__title {
+  font-size: 20px;
+  line-height: 13.86px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.result__description {
+  padding: 0 25px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.result__info {
+  margin: 0 35px 0 29px;
+  padding: 13px 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 8px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--color-background-privacy);
+  border-radius: 6px;
+}
+
+/* Стили для кнопки-сылки звонка */
+.result__button-link {
+  display: flex;
+  gap: 16px;
+  margin: 5px 15px;
+  padding: 30px 12px 25px 16px;
+  color: var(--color-light);
+  background-color: var(--color-red);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.result__button-link.disabled {
+  color: var(--color-text-inactive);
+  background-color: var(--color-burger-line);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button-link__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  font-weight: 900;
+}
+
+/* Стили для таймера */
+.timer__container {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-additional);
+}
+
+.timer__value {
+  font-size: 20px;
+}
+
+/* Стили для footer */
+.footer__result {
+  position: relative;
+  background-image: url('../img/png/bg.png');
+  background-position: bottom;
+  background-size: cover;
+  justify-content: end;
+  padding: 8px 13px 0 13px;
+}
+
+/* Стили для картинок с молнией */
+.left {
+  position: absolute;
+  height: auto;
+  top: 53vh;
+  left: -19px;
+  transform: rotate(-19deg);
+  z-index: 0;
+}
+
+.right {
+  position: absolute;
+  height: auto;
+  top: 61vh;
+  right: 0;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Стили для отображения полученных данных */
+.result__data {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.data {
+  width: 90vw;
+}
+
+/* Стиль для  высоты авто */
+.hight-auto {
+  height: auto;
+}
