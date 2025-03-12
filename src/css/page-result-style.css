@@ -1,3 +1,8 @@
+/* Стиль для для подчеркивания текста */
+.underline {
+  text-decoration: underline;
+}
+
 /* Стили для страницы результатов*/
 .result {
   position: relative;
