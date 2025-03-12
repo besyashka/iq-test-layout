@@ -46,6 +46,8 @@ const renderQuestion = (testContainer) => {
 
 // Функция для рендеринга картинки к вопросу, если она есть
 export const renderImageQuestion = (imgQuestion) => {
+  imgQuestion.src = '';
+  
   if (questions[state.index].image) {
     imgQuestion.src = questions[state.index].image;
     imgQuestion.classList.remove('hidden');
