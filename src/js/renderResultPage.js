@@ -12,12 +12,16 @@ export const renderResultPage = () => {
   updateHeaderTitle();
   clearTestContainers(testContainer);
   createElement('h4', 'result__title', testContainer, 'Ваш результат рассчитан:');
-  createElement(
+
+  const resultDescription = createElement(
     'p',
     'result__description',
     testContainer,
-    'вы относитесь к 3% респондентов, чей уровень интеллекта более чем на 15 пунктов отличается от среднего в большую или меньшую сторону!'
+    'респондентов, чей уровень интеллекта более чем на 15 пунктов отличается от среднего в большую или меньшую сторону!'
   );
+
+  renderUnderlineText(resultDescription);
+
   createElement('h5', 'result__subtitle', testContainer, 'Скорее получите свой результат!');
   createElement(
     'p',
@@ -38,6 +42,14 @@ export const renderResultPage = () => {
   );
 
   addAdditionalBackgrounds();
+};
+
+// Функция для создания подчеркнутого текста в параграфе description
+const renderUnderlineText = (resultDescription) => {
+  const underlineText = document.createElement('span');
+  underlineText.className = 'underline';
+  underlineText.textContent = 'Вы относитесь к 3% ';
+  resultDescription.prepend(underlineText);
 };
 
 // Функция чтоб обновить заголовок в header
